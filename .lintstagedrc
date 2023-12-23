@@ -1,4 +1,4 @@
 {
-  "**/*.{js,jsx,ts,tsx}": [    "eslint --fix --ext .js,.jsx,.ts,.tsx"
+  "**/*.{js,jsx,ts,tsx}": [    "eslint --fix --ext .js,.jsx,.ts,.tsx",    "prettier --cache --write --check"
   ]
 }

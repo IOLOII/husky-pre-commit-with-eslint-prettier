@@ -1,3 +1,13 @@
+# 用于理解 pre-commit  eslint  prettier
+
+> 项目中如需要使用语法校验：需要的操作：
+> 拷贝 devDependencies 中所有依赖
+> 添加 pre-commit 文件
+> 添加 lint:fix 脚本
+> （如需手动修复，执行 lint:fix 脚本）
+
+以下为其他：
+
 ## [prettier 配置](https://prettier.io/docs/en/options) + [eslint 用法](https://eslint.org/docs/latest/use/command-line-interface)
 
 `eslint-config-prettier` 和 `eslint-plugin-prettier` 是用于集成 ESLint 和 Prettier 的工具，它们的作用如下：

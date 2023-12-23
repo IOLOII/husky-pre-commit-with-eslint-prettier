@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "repository": {
+    "url": "https://github.com/IOLOII/husky-pre-commit-with-eslint-prettier.git"
+  },
   "scripts": {
     "prepare": "husky install",
-    "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --fix-type suggestion --format=stylish .  ",
+    "lint:fix": "eslint . --fix --cache --ext .js,.jsx,.ts,.tsx",
+
+    "以下脚本仅测试":"",
+    "lint:fix:old": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --fix-type suggestion --format=stylish .  ",
     "lint:prettier": "prettier -c --write \"**/**.{js,jsx,tsx,ts}\" --end-of-line auto",
     "lint:prettier:check": "prettier . --check",
-    "lint": "eslint . --fix --cache --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --write ."
   },
   "keywords": [],

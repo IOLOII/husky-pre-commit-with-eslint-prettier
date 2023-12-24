@@ -23,3 +23,29 @@
 
 ## 有效运行脚本：
 npm run lint
+
+## 安装脚本
+### husky
+```shell
+npm install husky --save-dev
+npm pkg set scripts.prepare="husky install"
+npm run prepare
+npx husky add .husky/pre-commit "npm test"
+git add .husky/pre-commit
+git commit -m "commit"
+# `npm test` 将运行
+
+
+# lint-staged 要求node>18
+npm install --save-dev lint-staged
+# 设置pre-commitgit hook 来运行lint-staged
+# 添加 npx lint-staged 在 pre-commit
+# 终端区域配置显示输出选项，切至git,eslint选项 即可看到实时错误信息
+npm init @eslint/config
+```
+
+注意直接拷贝本项目中的eslint配置可能会出现问题，本项目中配置的为前端项目配置，直接放在node cjs项目中会出现错误，比如 `error  'require' is not defined  no-undef`
+需要执行 重新定义eslint配置，拷贝本项目中的 rules extends plugins 覆盖就可以了
+```shell
+npm init @eslint/config
+```

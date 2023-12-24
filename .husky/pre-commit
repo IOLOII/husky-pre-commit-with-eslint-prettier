@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
-npm run lint:fix
-  npx --no-install lint-staged --quiet
+
+# 格式化所有文件
+# npm run lint:fix
+
+# 仅格式化待提交代码
+npx --no-install lint-staged --quiet

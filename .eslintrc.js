@@ -28,17 +28,19 @@ module.exports = {
     'indent': ['error', 2],
     'linebreak-style': 'off',
     'quotes': [
-    	'error',
-    	'single'
+      'error',
+      'single'
     ],
-
     semi: ['error', 'never'], // 不使用分号
     eqeqeq: 'error',
     'no-multi-spaces': 'error',
     'no-unused-vars': 'error',
     'json/json': 'error',
+    'autofix/no-debugger': 'error',
+    'autofix/no-unused-vars': 'error',
   },
   plugins: [
     'json',
+    'autofix'
   ]
 }
